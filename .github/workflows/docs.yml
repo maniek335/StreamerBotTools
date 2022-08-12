@@ -1,8 +1,10 @@
-name: Deploy
+name: Deploy docs
 on:
   push:
     branches:
       - main
+    paths:
+      - "docs/**"
 
 permissions:
   contents: read
