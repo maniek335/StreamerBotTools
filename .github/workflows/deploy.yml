@@ -1,0 +1,27 @@
+name: Deploy
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v2
+      - name: Build Solution
+        run: dotnet build -c Release
+      - name: Build Debug Solution
+        run: dotnet build -c Debug
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: StreamerBotToolsBundle
+          path: ./StreamerBotTools/bin
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: StreamerBotTools/bin/Release/StreamerBotTools.dll
