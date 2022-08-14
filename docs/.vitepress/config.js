@@ -4,6 +4,7 @@ export default defineConfig({
   title: "StreamerBotTools",
   base: "/StreamerBotTools/",
   srcDir: "src",
+  lastUpdated: true,
   themeConfig: {
     nav: [
       {
