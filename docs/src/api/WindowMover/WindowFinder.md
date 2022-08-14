@@ -1,5 +1,38 @@
 # WindowFinder
 
+## FindWindows()
+
+- **Type**
+
+  ```csharp
+  public class WindowFinder {
+    public static IEnumerable<WindowHandle> FindWindows(Predicate<WindowHandle> predicate);
+  }
+  ```
+
+- **Details**
+
+  Finds all windows that pass given predicate.
+
+- **Examples**
+
+  ```csharp{9}
+  using StreamerBotTools.WindowMover;
+
+  # Return all windows
+  IEnumerable<WindowHandle> windows = WindowFinder.FindWindows(wh => {
+    return true;
+  });
+
+  # Change the type of IEnumerable to List
+  List<WindowHandle> windows = (List)WindowFinder.FindWindows(wh => {
+    return true;
+  });
+  ```
+
+- **See also:**
+  - [API - WindowHandle](./WindowHandle)
+
 ## FindWindow()
 
 - **Type**
