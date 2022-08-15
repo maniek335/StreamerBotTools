@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using StreamerBotTools.Internal;
@@ -42,5 +42,11 @@ namespace StreamerBotTools.WindowMover
 
             return found;
         }
+
+        public static IEnumerable<WindowHandle> FindWindowsByTitle(string title)
+            => FindWindows(wh => wh.Title.Contains(title));
+
+        public static WindowHandle FindWindowByTitle(string title)
+            => FindWindow(wh => wh.Title.Contains(title));
     }
 }
