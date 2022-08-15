@@ -20,6 +20,10 @@
   }
   ```
 
+  - **Details**
+
+  Returns the hWnd of the window.
+
 ## Title
 
 - **Type**

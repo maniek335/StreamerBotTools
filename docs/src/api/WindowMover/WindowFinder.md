@@ -12,7 +12,7 @@
 
 - **Details**
 
-  Finds all windows that pass given predicate.
+  Finds all windows that pass the given predicate.
 
 - **Examples**
 
@@ -50,15 +50,15 @@
 
 - **Details**
 
-  Find first window that pass given predicate.
+  Find the first window that passes the given predicate.
 
   ::: warning
-  If window is not found, null is returned.
+  If the window is not found, null is returned.
   :::
 
 - **Examples**
 
-  ```csharp
+  ```csharp{8}
   using StreamerBotTools.WindowMover;
 
   WindowHandle window = WindowFinder.FindWindow(wh => {
