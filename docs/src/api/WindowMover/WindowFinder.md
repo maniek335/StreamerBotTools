@@ -16,12 +16,17 @@
 
 - **Examples**
 
-  ```csharp{9}
+  ```csharp{10,14}
   using StreamerBotTools.WindowMover;
 
   # Return all windows
   IEnumerable<WindowHandle> windows = WindowFinder.FindWindows(wh => {
     return true;
+  });
+
+  # Return all windows contains "OBS" in title
+  IEnumerable<WindowHandle> windows = WindowFinder.FindWindows(wh => {
+    return wh => wh.Title.Contains("OBS");
   });
 
   # Change the type of IEnumerable to List
@@ -68,3 +73,41 @@
 
 - **See also:**
   - [API - WindowHandle](./WindowHandle)
+
+## FindWindowsByTitle()
+
+- **Type**
+
+  ```csharp
+  public class WindowFinder {
+    public static IEnumerable<WindowHandle> FindWindowsByTitle(string title);
+  }
+  ```
+
+- **Details**
+
+  Finds all windows containing the specified fragment in the window title.
+
+- **See also:**
+  - [API - WindowFinder.FindWindows()](./WindowFinder.html#findwindows)
+
+## FindWindowByTitle()
+
+- **Type**
+
+  ```csharp
+  public class WindowFinder {
+    public static WindowHandle FindWindowByTitle(string title);
+  }
+  ```
+
+- **Details**
+
+  Finds the first window containing the specified fragment in the window title.
+
+  ::: warning
+  If the window is not found, null is returned.
+  :::
+
+- **See also:**
+  - [API - WindowFinder.FindWindows()](./WindowFinder.html#findwindow)

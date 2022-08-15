@@ -19,3 +19,17 @@
     public readonly IntPtr hWnd;
   }
   ```
+
+## Title
+
+- **Type**
+
+  ```csharp
+  public class WindowHandle {
+    public string Title { get; }
+  }
+  ```
+
+- **Details**
+
+  Returns the title of the window.
