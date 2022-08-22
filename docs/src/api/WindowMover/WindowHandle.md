@@ -37,3 +37,7 @@
 - **Details**
 
   Returns the title of the window.
+
+- **See also:**
+  - [API - WindowFinder.FindWindowsByTitle()](./WindowFinder#findwindowsbytitle)
+  - [API - WindowFinder.FindWindowByTitle()](./WindowFinder#findwindowbytitle)

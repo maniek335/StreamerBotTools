@@ -72,6 +72,7 @@
   ```
 
 - **See also:**
+  - [API - WindowFinder.FindWindows()](./WindowFinder#findwindows)
   - [API - WindowHandle](./WindowHandle)
 
 ## FindWindowsByTitle()
@@ -89,7 +90,8 @@
   Finds all windows containing the specified fragment in the window title.
 
 - **See also:**
-  - [API - WindowFinder.FindWindows()](./WindowFinder.html#findwindows)
+  - [API - WindowFinder.FindWindows()](./WindowFinder#findwindows)
+  - [API - WindowHandle](./WindowHandle)
 
 ## FindWindowByTitle()
 
@@ -110,4 +112,5 @@
   :::
 
 - **See also:**
-  - [API - WindowFinder.FindWindows()](./WindowFinder.html#findwindow)
+  - [API - WindowFinder.FindWindow()](./WindowFinder#findwindow)
+  - [API - WindowHandle](./WindowHandle)
