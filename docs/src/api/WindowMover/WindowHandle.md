@@ -68,6 +68,20 @@
 - **See also:**
   - [Microsoft Docs - Rectangle](https://docs.microsoft.com/en-us/dotnet/api/system.drawing.rectangle)
 
+## ShowProperties()
+
+- **Type**
+
+  ```csharp
+  public class WindowHandle {
+    public void ShowProperties();
+  }
+  ```
+
+- **Details**
+
+  Shows properties of the window in the message box.
+
 ## Resize()
 
 - **Type**

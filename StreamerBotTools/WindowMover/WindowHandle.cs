@@ -1,6 +1,7 @@
 using System;
 using System.Drawing;
 using System.Text;
+using System.Windows.Forms;
 using StreamerBotTools.Internal;
 
 namespace StreamerBotTools.WindowMover
@@ -48,6 +49,22 @@ namespace StreamerBotTools.WindowMover
                 cx: rect.Width,
                 cy: rect.Height,
                 uFlags: 0);
+        }
+
+        public void ShowProperties()
+        {
+            var rect = GetWindowRectangle();
+
+            var text = String.Join(
+                Environment.NewLine,
+                $"Title: {Title}",
+                $"hWnd: {hWnd}",
+                $"X: {rect.X}",
+                $"Y: {rect.Y}",
+                $"Width: {rect.Width}",
+                $"Height: {rect.Height}");
+
+            MessageBox.Show(text, "StreamerBotTools");
         }
 
         public bool Resize(int widthOffset, int heightOffset)
