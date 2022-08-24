@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
@@ -6,7 +7,7 @@ using StreamerBotTools.Internal;
 
 namespace StreamerBotTools.WindowMover
 {
-    public class WindowHandle
+    public class WindowHandle : IEquatable<WindowHandle>
     {
         public readonly IntPtr hWnd;
 
@@ -105,6 +106,32 @@ namespace StreamerBotTools.WindowMover
             rect.Y = newY;
 
             return SetWindowPos(rect);
+        }
+
+        public override bool Equals(object obj)
+        {
+            return Equals(obj as WindowHandle);
+        }
+
+        public bool Equals(WindowHandle other)
+        {
+            return !(other is null) &&
+                   EqualityComparer<IntPtr>.Default.Equals(hWnd, other.hWnd);
+        }
+
+        public override int GetHashCode()
+        {
+            return -75345830 + hWnd.GetHashCode();
+        }
+
+        public static bool operator ==(WindowHandle left, WindowHandle right)
+        {
+            return EqualityComparer<WindowHandle>.Default.Equals(left, right);
+        }
+
+        public static bool operator !=(WindowHandle left, WindowHandle right)
+        {
+            return !(left == right);
         }
     }
 }
