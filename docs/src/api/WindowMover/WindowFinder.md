@@ -114,3 +114,20 @@
 - **See also:**
   - [API - WindowFinder.FindWindow()](./WindowFinder#findwindow)
   - [API - WindowHandle](./WindowHandle)
+
+## GetActiveWindow()
+
+- **Type**
+
+  ```csharp
+  public class WindowFinder {
+    public static WindowHandle GetActiveWindow();
+  }
+  ```
+
+- **Details**
+
+  Returns of the currently active (focused) window.
+
+- **See also:**
+  - [API - WindowHandle](./WindowHandle)

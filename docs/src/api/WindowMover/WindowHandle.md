@@ -42,6 +42,23 @@
   - [API - WindowFinder.FindWindowsByTitle()](./WindowFinder#findwindowsbytitle)
   - [API - WindowFinder.FindWindowByTitle()](./WindowFinder#findwindowbytitle)
 
+## isActive
+
+- **Type**
+
+  ```csharp
+  public class WindowHandle {
+    public bool isActive { get; }
+  }
+  ```
+
+- **Details**
+
+  Returns `true` if the window is currently the active, foreground window.
+
+- **See also:**
+  - [API - WindowFinder.GetActiveWindow()](./WindowFinder#getactivewindow)
+
 ## GetWindowRectangle()
 
 - **Type**

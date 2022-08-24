@@ -33,6 +33,8 @@ namespace StreamerBotTools.WindowMover
             }
         }
 
+        public bool isActive => WindowFinder.GetActiveWindow() == this;
+
         public Rectangle GetWindowRectangle()
         {
             User32.GetWindowRect(hWnd, out RECT rect);
